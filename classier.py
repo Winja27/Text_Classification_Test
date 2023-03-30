@@ -24,23 +24,16 @@ with open(f"{url}.txt", mode="w", encoding="utf-8") as f:
 
 
 
-
-
-
-
-
-
-
-technology_path = "technology"  # 文件夹目录
+technology_path = "technology"
 finance_path = "finance"
-t_files = os.listdir(technology_path)  # 得到文件夹下的所有文件名称
+t_files = os.listdir(technology_path)
 f_files = os.listdir(finance_path)
 technology_list = []
 finance_list = []
 
-for file in t_files:  # 遍历文件夹
-    if not os.path.isdir(file):  # 判断是否是文件夹，不是文件夹才打开
-        f = open(technology_path + "/" + file)  # 打开文件
+for file in t_files:
+    if not os.path.isdir(file):
+        f = open(technology_path + "/" + file)
         iter_f = iter(f)  # 创建迭代器
         str = ""
         for line in iter_f:  # 遍历文件，一行行遍历，读取文本
